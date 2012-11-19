@@ -4,6 +4,7 @@ var CST_PARAMS_ERROR_NO_STORE = "Invalid id <br> no store with that id";
 var CST_PARAMS_ERROR_INVALID_QUERY= "Invalid query - please specify<br> ?store_id= \< id \>";
 var CST_PARAMS_STORE_ID_NOT_INTEGER = "Invalid id <br> id must be an integer";
 var CST_PARAMS_STORE_ID_NO_PARAMETER = "Invalid query <br> no id has been entered";
+var CST_PARAMS_PARAMETER_ZERO = "Invalid query <br> there is no store with id = 0";
 
 var storeForBanner = new Object(); // Store being queried.
 
@@ -67,6 +68,8 @@ function startupBlock() {
         paramsError(CST_PARAMS_ERROR_INVALID_QUERY);
     else if (!(strStoreId %1===0)) 
         paramsError(CST_PARAMS_STORE_ID_NOT_INTEGER);
+    else if (intStoreId == 0)
+        paramsError(CST_PARAMS_PARAMETER_ZERO);
     else 
         loadStoresData(intStoreId);
 
