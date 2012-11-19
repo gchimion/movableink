@@ -18,6 +18,10 @@ p.banner_style {
 		position: fixed;
   		top: 25%;
   		left: 25%;
+  		background: white;
 }  
 
-
+body {
+	background: #000 url(navy_blue.png);
+	color: #FFF;
+}
