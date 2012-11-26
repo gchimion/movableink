@@ -10,7 +10,7 @@ var storeForBanner = new Object(); // Store being queried.
 
 var strStoreId ="" // Url parameter.
 
-// Returns the openning hour for a string containing the store hours.
+// Returns the opening hour for a string containing the store hours.
 function formatOpenHours(strHours) {
     var aPos = strHours.search("a");
     var pPos = strHours.search("p");
